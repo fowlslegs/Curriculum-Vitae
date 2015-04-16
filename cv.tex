@@ -1,0 +1,158 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Friggeri Resume/CV
+% XeLaTeX Template
+% Version 1.1 (9/2/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Adrien Friggeri (adrien@friggeri.net)
+% https://github.com/afriggeri/CV
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX and the bibliography, if used,
+% needs to be compiled with biber rather than bibtex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
+
+\usepackage{graphicx}
+\newcommand\makeIcon[1]{%
+    \raisebox{-1pt}{%
+        \includegraphics[width=0.83\baselineskip, keepaspectratio]{icons/#1}%
+    }%
+}
+\newcommand\makeIconB[1]{%
+    \raisebox{-1pt}{%
+        \includegraphics[height=0.83\baselineskip, keepaspectratio]{icons/#1}%
+    }%
+}
+
+\begin{document}
+
+\header{Hamza}{Haiken}{Junior Software Developer} % Your name and current job title/field
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{aside} % In the aside, each new line forces a line break
+\section{Contact}
+\makeIcon{address} \hfill Ch. de Salette 24
+1023 Crissier
+Switzerland \vspace{5pt}
+\makeIcon{phone} \hfill +41 78 889 97 85 \vspace{5pt}
+\makeIcon{email} \hfill \href{mailto:tenchi@team2xh.net}{tenchi@team2xh.net} \vspace{5pt}
+\makeIcon{home} \hfill \href{http://tenchi.team2xh.net}{tenchi.team2xh.net} \vspace{5pt}
+\makeIcon{github} \hfill \href{http://github.com/Tenchi2xh}{github.com/Tenchi2xh}
+\section{Languages}
+French \hfill mother tongue
+English \hfill fluent
+German \hfill intermediate
+Arabic \hfill father tongue
+Japanese \hfill self-taught
+\section{Programming}
+Java 7 \& 8, Scala,
+Python, Haskell,
+C, C++ 98 \& 11,
+CSS3, HTML5
+\section{Interests}
+Solving challenges
+Self-learning new topics
+Passion for elegant code
+\end{aside}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2013 -- 2015}
+{\makeIcon{diploma} Bachelor of Science {\normalfont\footnotesize in Computer Science and Engineering}}
+{HEIG-VD, Yverdon-les-Bains}
+{BS Thesis : \hfill \makeIconB{heig} \vspace{5pt}
+\begin{quote}
+    \emph{CRT -- Cathode Ray Tracer} \\ Java ray tracer with custom scene description scripting language (grammar and parsing done with ANTLR4) and OpenGL live view
+\end{quote}\vspace{5pt}
+Course highlights :\vspace{5pt}
+\begin{itemize}
+    \item \textbf{Play} for Scala by Cay \fauxsc{Hortsmann} 
+    \item Human-machine interface project on robot \textbf{NAO} \\ for exhibition in Museum \textit{``La maison d'ailleurs''}
+    \item Multi-tier application project using \textbf{Java EE}, \emph{RAML} and \emph{Docker}
+    \item \textbf{Agile} course on \emph{AUP} \& \emph{XP} methodologies including group project
+    \item Dynamic single-page web application project \\ with REST API using \textbf{AngularJS}, \emph{Node.js} and \emph{MongoDB}.  
+    \item \emph{Neural networks} and machine learning, \emph{genetic algorithms}
+\end{itemize}}
+%------------------------------------------------
+\entry
+{2009 -- 2013}
+{{\normalfont \textit{Bachelor Student}}}
+{École Polytechnique Fédérale de Lausanne}
+{Course highlights : \hfill \makeIconB{epfl} \vspace{5pt}
+\begin{itemize}
+    \item \textbf{Scala} course by creator Martin \fauxsc{Odersky}
+    \item Distcrete structures course by Arjen \fauxsc{Lenstra}
+\end{itemize}}
+%------------------------------------------------
+\entry
+{2008 -- 2009}
+{{\normalfont \textit{Military Service}}}
+{Wangen a. A. / Bremgarten}
+{Natural disaster response commando (\emph{Katastrophenhilfebereitschaftsverband})}
+%------------------------------------------------
+\entry
+{2005 -- 2008}
+{\makeIcon{diploma} Federal Matura}
+{Gymnase du Bugnon, Lausanne}
+{Physics and mathematics orientation\vspace{5pt} \\
+Matura Thesis :\vspace{5pt}
+\begin{quote}
+    \emph{iGo -- Un projet Python} \\ Graphical game made in Python for playing the game of Go, with local and network play. Became the most borrowed thesis from the school's library during the next year
+\end{quote}}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2010 -- 2013}
+{École Polytechnique Fédérale de Lausanne}
+{Lausanne}
+{\emph{Teaching Assistant} \hfill \makeIconB{epfl} \\
+Assisting students in the logic systems course by Eduardo \fauxsc{Sanchez}}
+%------------------------------------------------
+\entry
+{2012}
+{TIG Piping}
+{Lausanne}
+{\emph{Designer} \\ Logo study \& design}
+%------------------------------------------------
+\entry
+{2010}
+{Random ICP}
+{Morges}
+{\emph{Web Designer} \\ Re-designed company's static home page from scratch}
+%------------------------------------------------
+\entry
+{2009}
+{Business \& Decision}
+{Geneva}
+{\emph{Web Designer} \\ Created static web page for CPM event}
+%------------------------------------------------
+\end{entrylist}
+\end{document}
