@@ -5,11 +5,12 @@
 \usepackage[utf8]{inputenc}
 \usepackage[scale=0.75]{geometry}
 \usepackage{graphicx}
-\usepackage{transparent}
+\usepackage{microtype}
+\usepackage{epstopdf}
 
 \newcommand\makeIcon[1]{%
     \raisebox{-1pt}{%
-        \includegraphics[width=0.83\baselineskip, keepaspectratio]{icons/#1}%
+        \includegraphics[decodearray={0.2 0.5}, width=0.83\baselineskip, keepaspectratio]{icons/#1}%
     }%
 }
 
@@ -17,15 +18,15 @@
 \title{Scala / Java developer}
 \address{Ch. de Salette 24}{1023 Crissier}{Switzerland}
 
-\renewcommand*{\mobilephonesymbol}{\\\makeIcon{phone}\hfill}
+\renewcommand*{\mobilephonesymbol}{\\\makeIcon{phone2}\hfill}
 \phone[mobile]{+41~78~889~97~85}
-\renewcommand*{\emailsymbol}{\makeIcon{email}\hfill}
+\renewcommand*{\emailsymbol}{\makeIcon{email2}\hfill}
 \email{tenchi@team2xh.net}
-\renewcommand*{\homepagesymbol}{\makeIcon{home}\hfill}
+\renewcommand*{\homepagesymbol}{\makeIcon{home2}\hfill}
 \homepage{tenchi.team2xh.net}
-\renewcommand*{\githubsocialsymbol}{\makeIcon{github}\hfill}
+\renewcommand*{\githubsocialsymbol}{\makeIcon{github2}\hfill}
 \social[github][github.com/Tenchi2xh]{github.com/Tenchi2xh}
-\extrainfo{\includegraphics[width=4cm]{picture} \vspace{-1cm}}
+\extrainfo{\includegraphics[width=4cm]{picture.png}}
 
 \begin{document}
 
@@ -45,7 +46,7 @@ In the \textsc{École Polythechnique Fédérale de Lausanne} (EPFL), I discovere
 
 Later, I further developed my Scala skills in my current school, where I learnt and developed projects for the \textit{Play framework} and \textit{Apache Spark}.
 
-While reading your job description, I quickly recognized myself in the mentioned values: \textit{complex and interesting} challenges, writing \textit{elegant} code and sharing knowledge and skills with a team. Ordina's modern idea of a workplace looks engaging: open offices, ``people over rules'' and agile methodologies are values that are really motivating, and I am very confident that I can fit in perfectly.
+While reading your job description, I quickly recognized myself in the mentioned values: solving \textit{complex and interesting} challenges, writing \textit{elegant} code and sharing knowledge and skills with a team. Ordina's modern idea of a workplace looks engaging: open offices, ``people over rules'' and agile methodologies are values that are really motivating, and I am very confident that I can fit in perfectly.
 
 You will find me to be a hard working person, for whom programming is not only a job but a passion. I love to solve challenges, to design effective solutions, and consider myself to be a good communicator and team player.
 
