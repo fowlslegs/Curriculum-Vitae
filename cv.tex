@@ -1,3 +1,6 @@
+% !TEX root
+% !TEX program = xelatex
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Friggeri Resume/CV
 % XeLaTeX Template
@@ -19,7 +22,10 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
+% Options
+% 'print': remove colors from this template for printing
+% 'nocolor' to disable colors in section headers
+\documentclass[]{fowlslegs-cv}
 
 \usepackage{graphicx}
 \newcommand\makeIcon[1]{%
@@ -33,138 +39,175 @@
     }%
 }
 
+\usepackage{enumitem}
+\setlist[itemize]{nosep, topsep=0pt,leftmargin=*}
+
 \begin{document}
-
-\header{Hamza}{Haiken}{Junior Software Engineer} % Your name and current job title/field
-
+\header{Noah}{Vesely}{Cryptographer} % Your name and current job title/field
 %----------------------------------------------------------------------------------------
 %	SIDEBAR SECTION
 %----------------------------------------------------------------------------------------
-
 \begin{aside} % In the aside, each new line forces a line break
 \section{Contact}
-\makeIcon{address} \hfill Ch. de Salette 24
-1023 Crissier
-Switzerland \vspace{5pt}
-\makeIcon{phone} \hfill +41 78 889 97 85 \vspace{5pt}
-\makeIcon{email} \hfill \href{mailto:tenchi@team2xh.net}{tenchi@team2xh.net} \vspace{5pt}
-\makeIcon{home} \hfill \href{http://tenchi.team2xh.net}{tenchi.team2xh.net} \vspace{5pt}
-\makeIcon{github} \hfill \href{http://github.com/Tenchi2xh}{github.com/Tenchi2xh}
+\makeIcon{address} \hfill London, UK
+\makeIcon{phone} \hfill \href{tel:+44 7903 224172}{+44 7903 224172}\vspace{1pt}
+\makeIcon{email} \hfill \href{mailto:fowlslegs@riseup.net}{fowlslegs@riseup.net}\vspace{1pt}
+\makeIcon{github} \hfill \href{https://github.com/nvesely}{github.com/nvesely}\vspace{1pt}
+%------------------------------------------------
 \section{Languages}
-French \hfill mother tongue
-English \hfill fluent
-German \hfill intermediate
-Arabic \hfill father tongue
-Japanese \hfill self-taught
-\section{Programming}
-Java 7 \& 8, Scala,
-Python, Haskell,
-C, C++ 98 \& 11,
-CSS3, HTML5
-\section{About Me}
-Born in Switzerland,
-on 19/11/1989.
-Grew up programming,
-playing music and
-travelling around the world
+Rust, Go, Python, C/C++, SQL, Clojure, Shell, LaTeX
+%------------------------------------------------
+\section{Technologies}
+\textbf{Security.} libsodium, Tor, IPTables, OSSEC, tcpdump/ Wireshark
+\textbf{Data Science.} scikit-learn, Jupyter Notebooks, NumPy, Clojush
+\textbf{Devops.} Docker, KVM, Container Linux, libvirt, Ansible, Vagrant, systemd, VirtualBox
+\textbf{Frameworks.} Django, Flask
+\textbf{Revision.} git, Github
+\textbf{Development.} Agile, TDD
+\textbf{Firmware.} Coreboot
 \section{Interests}
-Solving challenges
-Self-learning new topics
-Passion for elegant code
+Anonymous communication
+Zero-knowledge proofs
+Privacy technologies (PETs)
+Cryptography
+Machine learning
+Functional programming
+Formal verification
+Guitar
+Rock climbing
 \end{aside}
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
-\section{Education}
-
-\begin{entrylist}
-%------------------------------------------------
-\entry
-{2013 -- 2015}
-{\makeIcon{diploma} Bachelor of Science {\normalfont\footnotesize in Computer Science and Engineering}}
-{HEIG-VD, Yverdon-les-Bains}
-{BSc Thesis : \hfill \makeIconB{heig} \vspace{3pt}
-\begin{quote}
-    \emph{CRT -- Cathode Ray Tracer} \\ Java ray tracer with custom scene description scripting language (grammar and parsing done with ANTLR4) and OpenGL live view
-\end{quote}\vspace{5pt}
-Course highlights :\vspace{3pt}
-\begin{itemize}
-    \item \textbf{Play} for Scala by Cay \fauxsc{Hortsmann}, with \textit{ScalaJS} and \textit{Spark}
-    \item Human-machine interface project on robot \textbf{NAO} \\ for exhibition in Museum \textit{``La maison d'ailleurs''}
-    \item Multi-tier application project using \textbf{Java EE}, \emph{RAML} and \emph{Docker}
-    \item \textbf{Agile} course on \emph{AUP} \& \emph{XP} methodologies including group project
-    \item Dynamic single-page web application project \\ with REST API using \textbf{AngularJS}, \emph{Node.js} and \emph{MongoDB}.  
-    \item \emph{Neural networks} and machine learning, \emph{genetic algorithms}
-\end{itemize}}
-%------------------------------------------------
-\entry
-{2009 -- 2013}
-{{\normalfont \textit{Bachelor Student} {\footnotesize in Computer Science}}}
-{École Polytechnique Fédérale de Lausanne}
-{Course highlights : \hfill \makeIconB{epfl} \vspace{3pt}
-\begin{itemize}
-    \item \textbf{Scala} course by creator Martin \fauxsc{Odersky}
-    \item Distcrete structures course by Arjen \fauxsc{Lenstra}
-\end{itemize}}
-%------------------------------------------------
-\entry
-{2008 -- 2009}
-{{\normalfont \textit{Military Service}}}
-{Wangen a. A. / Bremgarten}
-{Natural disaster response commando (\emph{Katastrophenhilfebereitschaftsverband})}
-%------------------------------------------------
-\entry
-{2005 -- 2008}
-{\makeIcon{diploma} Federal Matura}
-{Gymnase du Bugnon, Lausanne}
-{Physics and mathematics orientation\vspace{5pt} \\
-Matura Thesis :\vspace{3pt}
-\begin{quote}
-    \emph{iGo -- Un projet Python} \\ Graphical game made in Python for playing the game of Go, with local and network play. Became the most borrowed thesis from the school's library during the next year
-\end{quote}}
-%------------------------------------------------
-\end{entrylist}
-
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
-
 \section{Experience}
-
 \begin{entrylist}
 %------------------------------------------------
 \entry
-{2014 -- 2015}
-{\normalfont \textit{Various school tutoring jobs}}
-{Canton de Vaud}
-{\vspace{-14pt}}
+{2018--}
+{Glyff}
+{Cryptographer}
+{London, UK}
+{Designed a privacy-preserving smart contract platform based on Ethereum.
+Co-authored a whitepaper. Audited a prototype implementation.}
 %------------------------------------------------
 \entry
-{2010 -- 2013}
-{École Polytechnique Fédérale de Lausanne}
-{Lausanne}
-{\emph{Teaching Assistant} \hfill \makeIconB{epfl} \\
-Assisting students in the logic systems course by Eduardo \fauxsc{Sanchez}}
+{2017--8}
+{Freelance}
+{Security Engineer}
+{Mexico City, MX}
+{Information security related development, consulting, and training. Clients
+included Data Cívica and Human Rights Data Analysis Group.}
 %------------------------------------------------
 \entry
-{2012}
-{TIG Piping}
-{Lausanne}
-{\emph{Designer} \\ Logo study \& design}
+{2015--7}
+{Freedom of the Press Foundation}
+{Security Engineer}
+{San Francisco, USA}
+{\makeIcon{github}
+  \href{https://github.com/freedomofpress/securedrop}{/securedrop}. Developed
+  an open-source whistleblower submission platform. Stringent security
+  requirements and a multi-machine, multi-OS architecture demanded
+  wide-breadth domain knowledge including cryptographic, network, OS, and
+  application-level security expertise. \\
+%------------------------------------------------
+  \makeIcon{github}
+  \href{https://github.com/freedomofpress/fingerprint-securedrop}{/fingerprint-securedrop}.
+  Designed and implemented a machine learning (ML) system to evaluate website
+  fingerprinting attacks and defenses for Tor onion services. Led Tor meeting
+  group sessions on the topic and presented my work to KU Leuven's COSIC
+  research group. \\
+%------------------------------------------------
+  \makeIcon{github}
+  \href{https://github.com/freedomofpress/wa-knn-fingerprint-securedrop}{/wa-knn-fingerprint-securedrop}.
+  The fastest implementation of a specialized ML classifier.}
 %------------------------------------------------
 \entry
-{2010}
-{Random ICP}
-{Morges}
-{\emph{Web Designer} \\ Re-designed company's static home page from scratch}
+{2013--}
+{Web Precision}
+{Security Consultant \& Systems Administrator}
+{Mission Viejo, CA, USA}
+{Most recently (2018): designed a sandboxing solution for a multi-tenant web
+server that succesfully isolated website compromises to unprivileged tenant domains.}
 %------------------------------------------------
 \entry
-{2009}
-{Business \& Decision}
-{Geneva}
-{\emph{Web Designer} \\ Created static web page for CPM event}
+{2012--5}
+{Hampshire College Quantitative Resource Center}
+{Manager}
+{Amherst, MA, USA}
+{Tutored primarily mathematics and computer science. Managed the hiring process,
+budgeting, and staff schedule. Under my oversight the center saw record
+attendance levels.}
 %------------------------------------------------
 \end{entrylist}
+%----------------------------------------------------------------------------------------
+%	PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+\section{Projects}
+\begin{entrylist}
+%------------------------------------------------
+\entryy
+{2018}
+{Winternitz}
+{Author}
+{\makeIcon{github}\href{https://github.com/nvesely/winternitz}{/winternitz}}
+{The first standalone implementation of the post-quantum WOTS-T one-time signature scheme.}
+%------------------------------------------------
+\entryy
+{2018}
+{Shamir's Secret Sharing}
+{Author}
+{\makeIcon{github}\href{https://github.com/SpinResearch/RustySecrets}{/RustySecrets}}
+{An implementation of Shamir's Secret Sharing Scheme that provides authentication of shares.}
+%------------------------------------------------
+\entryy
+{2018}
+{SodiumOxide}
+{Maintainer \& Contributor}
+{\makeIcon{github}\href{https://github.com/sodiumoxide/sodiumoxide}{/sodiumoxide}}
+{Rust bindings to the C++ libsodium cryptography library.}
+%------------------------------------------------
+\entryy
+{2017--}
+{Application Layer Padding Concerns Adversaries (ALPaCA)}
+{Author}
+{\makeIcon{github}\href{https://github.com/camelids/libalpaca}{/libalpaca}}
+{A library that implements ALPaCa, an application-layer defense against website fingerprinting.}
+%------------------------------------------------
+\end{entrylist}
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{entrylist}
+\entry
+{2018--}
+{Master of Science {\normalfont\footnotesize in Information Security}}
+{}
+{University College London}
+{}
+%------------------------------------------------
+\entry
+{2015}
+{\makeIcon{diploma} Bachelor of Science {\normalfont\footnotesize in Mathematics, minor in Computer Science}}
+{}
+{Hampshire College}
+{\emph{McEliece-Type Cryptosystems as Post-Quantum Standards}\hfill
+  \makeIcon{github}\href{https://github.com/nvesely/McEliece-Type-Cryptosystems-Report}{/McEliece}\\
+  An analysis of McEliece-Type cryptosystems as a post-quantum replacement for
+  RSA. Review of literature focusing on developments towards an IND-CCA2 variant
+  with sufficiently small key size for embedded devices. \vspace{1mm}\\
+%------------------------------------------------
+  \emph{An Evolved Cryptographic Compression Function}\hfill
+  \makeIcon{github}\href{https://github.com/nvesely/Clojush-Compression-Function}{/Compression-Function}\\
+  Used the PushGP genetic programming environment to evolve a cryptographic
+  compression function. \vspace{1mm}\\
+%------------------------------------------------
+  \emph{Other highlights:}
+  \begin{itemize}
+    \item Worked in a genetic programming research group.
+    \item Founded a student group to promote open-source \& privacy enhancing technologies.
+\end{itemize}}
+\end{entrylist}
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
 \end{document}

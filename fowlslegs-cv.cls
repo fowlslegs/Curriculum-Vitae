@@ -1,4 +1,4 @@
-\ProvidesClass{friggeri-cv}[2012/04/30 CV class]
+\ProvidesClass{fowlslegs-cv}[2012/04/30 CV class] % Based heavily on friggeri-cv
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption{print}{\def\@cv@print{}}
@@ -50,16 +50,14 @@
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
-\newfontfamily\bodyfont[]{Neue Haas Grotesk Display Pro 55 Roman}
-%\newfontfamily\bodyfont[]{Helvetica}
-\newfontfamily\thinfont[]{Neue Haas Grotesk Display Pro 25 Thin}
-%\newfontfamily\thinfont[]{Helvetica 25 Ultra Light}
-%\newfontfamily\headingfont[]{Neue Haas Grotesk Display Pro 65 Medium}
-\newfontfamily\headingfont[]{HelveticaCdBd.ttf}
+\newfontfamily\bodyfont[]{LiberationSans}
+\newfontfamily\thinfont[]{LiberationSansNarrow}
+\newfontfamily\sectionfont[]{HelveticaNeue-BoldCond.otf}
+\newfontfamily\headingfont[]{HelveticaNeue-Bold.otf}
+\newfontfamily\lightheadingfont[]{HelveticaNeue-Light.otf}
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=textcolor]{Neue Haas Grotesk Display Pro 35 Extra Light}
-%\setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica-Light}
+\setmainfont[Mapping=tex-text, Color=textcolor]{LiberationSansNarrow}
 
 %\setmathfont{XITS Math}
 
@@ -92,11 +90,11 @@
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
       \fontsize{40pt}{72pt}\color{header}%
-      {\thinfont #1}{\bodyfont \fauxsc{#2}}
+      {\lightheadingfont #1}{\headingfont \fauxsc{#2}}
     };
     \node [anchor=north] at (name.south) {%
       \fontsize{14pt}{24pt}\color{header}%
-      \thinfont #3%
+      \lightheadingfont #3%
     };
   \end{tikzpicture}
   \vspace{2.5cm}
@@ -128,17 +126,17 @@
 }
 
 \renewcommand{\section}[1]{
-  \par\vspace{\parskip}
+  \par\vspace{.5\parskip}
   {%
-    \LARGE\headingfont\color{headercolor}%
+    \LARGE\sectionfont\color{headercolor}%
     \@sectioncolor #1%
   }
-  \par\vspace{\parskip}
+  \par\vspace{.5\parskip}
 }
 
 \renewcommand{\subsection}[2]{
   \par\vspace{.5\parskip}%
-  \Large\headingfont\color{headercolor} #2%
+  \Large\sectionfont\color{headercolor} #2%
   \par\vspace{.25\parskip}%
 }
 
@@ -155,13 +153,20 @@
 }{%
   \end{tabular*}
 }
-\renewcommand{\bfseries}{\headingfont\color{headercolor}}
-\newcommand{\entry}[4]{%
-  #1&\parbox[t]{11cm}{%
-    \textbf{#2}%
+\renewcommand{\bfseries}{\sectionfont\color{headercolor}}
+\newcommand{\entry}[5]{%
+  #1&\parbox[t]{12cm}{%
+    \textbf{#2} \emph{#3}%
     \hfill%
-    {\footnotesize\addfontfeature{Color=lightgray} #3}\vspace{5pt}\\%
-    #4\vspace{1.5\parsep}%
+    {\footnotesize\addfontfeature{Color=lightgray} #4}\vspace{2pt}\\%
+    #5\vspace{\parsep}%
+  }\\}
+\newcommand{\entryy}[5]{%
+  #1&\parbox[t]{12cm}{%
+    \textbf{#2} \emph{#3}%
+    \hfill%
+    {#4}\vspace{2pt}\\%
+    #5\vspace{\parsep}%
   }\\}
 
 
@@ -175,14 +180,14 @@
 \newenvironment{aside}{%
   \let\oldsection\section
   \renewcommand{\section}[1]{
-    \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor}\@sectioncolor ##1}\vspace{8pt}
+    \par\vspace{\baselineskip}{\Large\sectionfont\color{headercolor}\@sectioncolor ##1}\vspace{8pt}
   }
-  \begin{textblock}{3.8}(1.5, 4.31)
-  \begin{flushright}
+  \begin{textblock}{3.6}(1.5, 4.23)
+  \begin{flushleft}
   \obeycr
 }{%
   \restorecr
-  \end{flushright}
+  \end{flushleft}
   \end{textblock}
   \let\section\oldsection
 }
@@ -325,13 +330,13 @@
 \RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=1.5cm,nohead,nofoot,a4paper]{geometry}
 \RequirePackage[hidelinks]{hyperref}
 \hypersetup{
-  colorlinks=false,       
-  linkcolor=red,          
-  citecolor=red,        
-  filecolor=red,      
+  colorlinks=false,
+  linkcolor=red,
+  citecolor=red,
+  filecolor=red,
   urlcolor = red
 }
-    
+
 % A fix for \href{}{} colors not working with fontspec
 \makeatletter
 \def\HyColor@@@@UseColor#1\@nil{\addfontfeatures{Color=#1}}
