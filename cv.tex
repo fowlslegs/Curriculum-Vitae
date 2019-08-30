@@ -58,7 +58,8 @@
 Rust, Go, Python, C/C++, SQL, Clojure, Shell, LaTeX
 %------------------------------------------------
 \section{Technologies}
-\textbf{Security.} libsodium, Tor, IPTables, OSSEC, tcpdump/ Wireshark
+\textbf{Cryptography.} libzexe, bellman, libsodium
+\textbf{Security.} Tor, IPTables, OSSEC, tcpdump/ Wireshark
 \textbf{Data Science.} scikit-learn, Jupyter Notebooks, NumPy, Clojush
 \textbf{Devops.} Docker, KVM, Container Linux, libvirt, Ansible, Vagrant, systemd, VirtualBox
 \textbf{Frameworks.} Django, Flask
@@ -66,10 +67,8 @@ Rust, Go, Python, C/C++, SQL, Clojure, Shell, LaTeX
 \textbf{Development.} Agile, TDD
 \textbf{Firmware.} Coreboot
 \section{Interests}
-Anonymous communication
 Zero-knowledge proofs
-Privacy technologies (PETs)
-Cryptography
+Anonymous communication
 Machine learning
 Functional programming
 Formal verification
@@ -83,9 +82,17 @@ Rock climbing
 \begin{entrylist}
 %------------------------------------------------
 \entry
-{2018--}
+{Sum. '19}
+{Celo}
+{Research Scientist}
+{San Francisco, USA}
+{Research and design of an ultra-light client for a BFT-style blockchain network
+utilizing zkSNARKS, proof-carrying data, and SNARK-friendly primitives.}
+%------------------------------------------------
+\entry
+{Sum. '18}
 {Glyff}
-{Cryptographer}
+{Research Scientist}
 {London, UK}
 {Designed a privacy-preserving smart contract platform based on Ethereum.
 Co-authored a whitepaper. Audited a prototype implementation.}
@@ -93,10 +100,10 @@ Co-authored a whitepaper. Audited a prototype implementation.}
 \entry
 {2017--8}
 {Freelance}
-{Security Engineer}
+{Security and Cryptography Engineer}
 {Mexico City, MX}
-{Information security related development, consulting, and training. Clients
-included Data Cívica and Human Rights Data Analysis Group.}
+{Information security and cryptography related development, consulting, and
+training. Clients included Data Cívica and Human Rights Data Analysis Group.}
 %------------------------------------------------
 \entry
 {2015--7}
@@ -126,8 +133,7 @@ included Data Cívica and Human Rights Data Analysis Group.}
 {Web Precision}
 {Security Consultant \& Systems Administrator}
 {Mission Viejo, CA, USA}
-{Most recently (2018): designed a sandboxing solution for a multi-tenant web
-server that succesfully isolated website compromises to unprivileged tenant domains.}
+{Intermittent consulting. Most recently (2018): designed a sandboxing solution for a multi-tenant web server that succesfully isolated website compromises to unprivileged tenant domains.}
 %------------------------------------------------
 \entry
 {2012--5}
@@ -177,28 +183,42 @@ attendance levels.}
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
+\pagebreak
 \section{Education}
 \begin{entrylist}
 \entry
-{2018--}
+{2018}
 {Master of Science {\normalfont\footnotesize in Information Security}}
 {}
 {University College London}
-{}
+{\emph{Polynomial Commitment Schemes with Applications to Zero-Knowledge
+Proofs}\\
+  We introduce two new efficient PC schemes, one that is \emph{succinct} and another that is \emph{transparent} (i.e., that doesn't require a trusted setup). Our main application introduces a new, state-of-the-art [redacted].
+  % holographic IOP and compiler that given a PC scheme outputs a zero-knowledge preprocessing argument with universal SRS. When instantiated with our succinct PC scheme, we produce the most efficient zkSNARK with universal and updatable SRS; with our transparent PC scheme, the most efficient transparent, zero-knowledge argument of knowledge
+  One building block of our transparent PC scheme is a new [redacted]
+  % \emph{inner pairing product} argument. 
+  In the appendices we show a few additional applications of this [redacted]
+  % argument
+  including highly efficient aggregation of pairing-based zkSNARKs and signatures. \vspace{1mm}\\
+%------------------------------------------------
+  \emph{Other highlights:}
+  \begin{itemize}
+    \item Started two research papers in zero-knowledge proofs, one of which has been submitted to OAKLAND 2020 and the other still in progress.
+    \item Currently implementing a novel zero-knowledge proof system for R1CS introduced in one of our research papers.
+  \end{itemize}
+}
 %------------------------------------------------
 \entry
 {2015}
 {\makeIcon{diploma} Bachelor of Science {\normalfont\footnotesize in Mathematics, minor in Computer Science}}
 {}
 {Hampshire College}
-{\emph{McEliece-Type Cryptosystems as Post-Quantum Standards}\hfill
-  \makeIcon{github}\href{https://github.com/nvesely/McEliece-Type-Cryptosystems-Report}{/McEliece}\\
+{\emph{McEliece-Type Cryptosystems as Post-Quantum Standards}\\
   An analysis of McEliece-Type cryptosystems as a post-quantum replacement for
   RSA. Review of literature focusing on developments towards an IND-CCA2 variant
   with sufficiently small key size for embedded devices. \vspace{1mm}\\
 %------------------------------------------------
-  \emph{An Evolved Cryptographic Compression Function}\hfill
-  \makeIcon{github}\href{https://github.com/nvesely/Clojush-Compression-Function}{/Compression-Function}\\
+  \emph{An Evolved Cryptographic Compression Function}\\
   Used the PushGP genetic programming environment to evolve a cryptographic
   compression function. \vspace{1mm}\\
 %------------------------------------------------
